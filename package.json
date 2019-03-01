@@ -1,0 +1,501 @@
+{
+    "author": "pipecork",
+    "dependencies": {
+        "pebble-clay": "^1.0.4"
+    },
+    "keywords": ["pebble-app","temperature","weather","pipecork"],
+    "name": "pebble-citytemp",
+    "description": "Simple weather watchface... fun for the whole family!",
+    "homepage": "http://github.com/maxdavid/pebble-citytemp",
+    "repository": "http://github.com/maxdavid/pebble-citytemp",
+    "license": "MIT",
+    "pebble": {
+        "capabilities": [
+            "location",
+            "configurable"
+        ],
+        "displayName": "CityTemp: Gaiden",
+        "enableMultiJS": true,
+        "messageKeys": {
+            "ampmsecs": 8,
+            "background": 9,
+            "bluetoothvibe_status": 6,
+            "format": 2,
+            "hourlyvibe": 7,
+            "icon": 4,
+            "invert": 10,
+            "language": 1,
+            "startday_status": 12,
+            "status": 0,
+            "steps_status": 13,
+            "temperature": 3,
+            "textcol": 11,
+            "weatherstatus": 5
+        },
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/city-blank",
+                    "name": "BLANK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/rotterdam",
+                    "name": "ROTTERDAM",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bishkek",
+                    "name": "BISHKEK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/stpetersberg",
+                    "name": "STPETERSBERG",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-clearday.png",
+                    "name": "CLEAR_DAY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-90",
+                    "name": "IMAGE_BATT_90",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-70",
+                    "name": "IMAGE_BATT_70",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-50",
+                    "name": "IMAGE_BATT_50",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-30",
+                    "name": "IMAGE_BATT_30",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-10",
+                    "name": "IMAGE_BATT_10",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-80",
+                    "name": "IMAGE_BATT_80",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-60",
+                    "name": "IMAGE_BATT_60",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-40",
+                    "name": "IMAGE_BATT_40",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-20",
+                    "name": "IMAGE_BATT_20",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/BATT-100",
+                    "name": "IMAGE_BATT_100",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/DEFAULT",
+                    "name": "DEFAULT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "characterRegex": "[0-9: ]",
+                    "file": "fonts/sansation.ttf",
+                    "name": "FONT_CUSTOM_48",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "characterRegex": "[0-9:\u00b0 -]",
+                    "file": "fonts/sansation.ttf",
+                    "name": "FONT_CUSTOM_20",
+                    "targetPlatforms": null,
+                    "trackingAdjust": 1,
+                    "type": "font"
+                },
+                {
+                    "characterRegex": "[0-9: ]",
+                    "compatibility": "2.7",
+                    "file": "fonts/sansation.ttf",
+                    "name": "FONT_CUSTOM_37",
+                    "targetPlatforms": null,
+                    "trackingAdjust": 1,
+                    "type": "font"
+                },
+                {
+                    "compatibility": "2.7",
+                    "file": "fonts/sansation.ttf",
+                    "name": "FONT_CUSTOM_14",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "characterRegex": "[0-9:\u00b0 -]",
+                    "file": "fonts/sansation.ttf",
+                    "name": "FONT_CUSTOM_42",
+                    "targetPlatforms": null,
+                    "trackingAdjust": 1,
+                    "type": "font"
+                },
+                {
+                    "file": "images/textimg-Cloud.png",
+                    "name": "CLOUD",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bogota",
+                    "name": "BOGOTA",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/calgary",
+                    "name": "CALGARY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/seattle",
+                    "name": "SEATTLE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/milan",
+                    "name": "MILAN",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/canberra",
+                    "name": "CANBERRA",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/portland",
+                    "name": "PORTLAND",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bangkok",
+                    "name": "BANGKOK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/menu.png",
+                    "menuIcon": true,
+                    "name": "IMAGE_MENU_ICON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/vancouver",
+                    "name": "VANCOUVER",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/toronto",
+                    "name": "TORONTO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/losangeles",
+                    "name": "LOSANGELES",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/chicago",
+                    "name": "CHICAGO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/washingtondc",
+                    "name": "WASHINGTONDC",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/wellington",
+                    "name": "WELLINGTON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/madrid",
+                    "name": "MADRID",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/rio",
+                    "name": "RIO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/seoul",
+                    "name": "SEOUL",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/hongkong",
+                    "name": "HONGKONG",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/delhi",
+                    "name": "DELHI",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/beijing",
+                    "name": "BEIJING",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/athens",
+                    "name": "ATHENS",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-pc-night.png",
+                    "name": "PARTLY_CLOUDY_NIGHT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-pc-day.png",
+                    "name": "PARTLY_CLOUDY_DAY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/icon_battery_charge.png",
+                    "name": "IMAGE_BATT_CHARGING",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/shanghai",
+                    "name": "SHANGHAI",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/rome",
+                    "name": "ROME",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/tokyo",
+                    "name": "TOKYO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/paris",
+                    "name": "PARIS",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/moscow",
+                    "name": "MOSCOW",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/berlin",
+                    "name": "BERLIN",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/newyork",
+                    "name": "NEWYORK",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/london",
+                    "name": "LONDON",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/singapore",
+                    "name": "SINGAPORE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/dublin",
+                    "name": "DUBLIN",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/sanfran",
+                    "name": "SANFRANCISCO",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/dubai",
+                    "name": "DUBAI",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/auckland",
+                    "name": "AUCKLAND",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/brisbane",
+                    "name": "BRISBANE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/sydney",
+                    "name": "SYDNEY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/melbourne",
+                    "name": "MELBOURNE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-yahoo.png",
+                    "name": "NA",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-hail.png",
+                    "name": "HAIL",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-snow.png",
+                    "name": "SNOW",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-haze.png",
+                    "name": "HAZE",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-fog.png",
+                    "name": "FOG",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-cold.png",
+                    "name": "COLD",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-rain.png",
+                    "name": "RAIN",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-storm.png",
+                    "name": "STORM",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-cloudy.png",
+                    "name": "CLOUDY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-clearnight.png",
+                    "name": "CLEAR_NIGHT",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/textimg-windy.png",
+                    "name": "WINDY",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt",
+            "chalk",
+            "diorite"
+        ],
+        "uuid": "9c584847-bdf4-4889-9538-91e42974a185",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "5.1.0"
+}
