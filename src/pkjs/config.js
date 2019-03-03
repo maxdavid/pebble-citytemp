@@ -15,18 +15,25 @@ module.exports=[
                 "defaultValue": "<h5>Weather</h5>"
             },
             {
-                "type": "input",
-                "messageKey": "location",
-                "label": "Location",
-                "description": "<strong>You must</strong> enter a location if \"Use GPS\" is NO. Ie. city name or postal/zip code (even if you choose to hide the weather).",
-                "defaultValue": ""
-            },
-            {
                 "type": "toggle",
                 "messageKey": "use_gps",
                 "label": "Use GPS",
-                "description": "If you want to conserve some battery, have GPS=NO AND enter your location eg. London.",
+                "description": "If you want to conserve some battery, have GPS=NO AND enter your city name or zip code.",
                 "defaultValue": true
+            },
+            {
+                "type": "input",
+                "messageKey": "zip_code",
+                "label": "Zip Code",
+                "description": "You <strong>must</strong> enter a zip code or city name if \"Use GPS\" is NO.",
+                "defaultValue": ""
+            },
+            {
+                "type": "input",
+                "messageKey": "city_name",
+                "label": "City",
+                "description": "You <strong>must</strong> enter a zip code or city name if \"Use GPS\" is NO.",
+                "defaultValue": ""
             },
             {
                 "type": "radiogroup",

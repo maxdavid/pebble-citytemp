@@ -123,8 +123,10 @@ function updateWeather() {
     navigator.geolocation.getCurrentPosition(locationSuccess,
                                              locationError,
                                              locationOptions);
-  } else {
-    getWeatherFromLocation(options.location);
+  } else if (options.zip_code) {
+    getWeatherFromLocation('zip=' + options.zip_code);
+  } else if (options.city_name) {
+    getWeatherFromLocation('q=' + options.city_name);
   }
 }
 
