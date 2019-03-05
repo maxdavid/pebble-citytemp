@@ -59,7 +59,9 @@ if (options === null)
     options = {
         "use_gps" : true,
         "units" : "fahrenheit",
-        "hideweather" : false
+        "hideweather" : false,
+        "city_name" : "",
+        "zip_code" : ""
     };
 
 function getWeatherFromLatLong(latitude, longitude) {
@@ -123,9 +125,9 @@ function updateWeather() {
     navigator.geolocation.getCurrentPosition(locationSuccess,
                                              locationError,
                                              locationOptions);
-  } else if (options.zip_code) {
+  } else if (options.zip_code != '') {
     getWeatherFromLocation('zip=' + options.zip_code);
-  } else if (options.city_name) {
+  } else if (options.city_name != '') {
     getWeatherFromLocation('q=' + options.city_name);
   }
 }
