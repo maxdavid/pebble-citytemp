@@ -14,6 +14,7 @@ module.exports=[
                 "type": "heading",
                 "defaultValue": "<h5>Weather</h5>"
             },
+          /*
             {
                 "type": "toggle",
                 "messageKey": "use_gps",
@@ -35,6 +36,7 @@ module.exports=[
                 "description": "You <strong>must</strong> enter a zip code or city name if \"Use GPS\" is NO.",
                 "defaultValue": ""
             },
+            */
             {
                 "type": "radiogroup",
                 "messageKey": "units",
