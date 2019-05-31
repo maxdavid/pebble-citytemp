@@ -939,9 +939,9 @@ void handle_init(void) {
   layer_add_child(window_layer, text_layer_get_layer(temp_layer));
 
 #ifdef PBL_PLATFORM_CHALK
-	temp_layer3 = text_layer_create(GRect(121, 103, 35, 20));
+	temp_layer3 = text_layer_create(GRect(121, 103, 40, 20));
 #else
-	temp_layer3 = text_layer_create(GRect(101, 93, 35, 20));
+	temp_layer3 = text_layer_create(GRect(101, 93, 40, 20));
 #endif
   text_layer_set_text_color(temp_layer3, GColorBlack);
   text_layer_set_background_color(temp_layer3, GColorClear);
@@ -950,9 +950,9 @@ void handle_init(void) {
   layer_add_child(window_layer, text_layer_get_layer(temp_layer3));
 	
 #ifdef PBL_PLATFORM_CHALK
-	temp_layer4 = text_layer_create(GRect(120, 102, 36, 24));
+	temp_layer4 = text_layer_create(GRect(120, 102, 41, 24));
 #else
-	temp_layer4 = text_layer_create(GRect(100, 92, 36, 24));
+	temp_layer4 = text_layer_create(GRect(100, 92, 41, 24));
 #endif
   text_layer_set_text_color(temp_layer4, GColorBlack);
   text_layer_set_background_color(temp_layer4, GColorClear);
