@@ -4,7 +4,9 @@
 
 Temperature watchface for the Pebble smart watch. Uses GPS from bluetooth connected smartphone to query [Open Weather Map](https://openweathermap.org/) to get local temperature and conditions. Comes with graphics for 9 different weather conditions and 40 different cities.
 
-Compatible with the Pebble Classic, Steel, Time, Time Steel, and Time Round watches.
+Compatible with the Pebble Classic, Steel, Time, Time Steel, and Time Round watches. Consult the official [Rebble HowTo guide](https://rebble.io/howto/) for installation instructions.
+
+---
 
 ### Configuration
 
@@ -74,3 +76,17 @@ Large / Small / None (default: Large)
 - Vancouver
 - Washington DC
 - Wellington
+
+##### Big Time
+
+True / False (default: False)
+
+#### Vibration
+
+##### Bluetooth vibration
+
+True / False (default: False)
+
+##### Hourly vibration
+
+True / False (default: False)
